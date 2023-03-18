@@ -20,6 +20,6 @@ function calculateMinCost() {
 		});
 		
 	}
-	document.querySelector("#result").value=cost;
+	document.querySelector("#result").textContent=cost;
 	
 }  

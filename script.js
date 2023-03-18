@@ -5,21 +5,21 @@ function calculateMinCost() {
 	for(var i=0;i<inputArr.length;i++){
 		inputArr[i]= Number(inputArr[i]);
 	}
-	
 	 inputArr.sort(function(a,b){
 	  return a-b;
   });
 	var cost = 0;
 	while (inputArr.length>1) {
-		var priceRope = inputArr[0]+ inputArr[1];
-		cost += priceRope;
+		var newRope = inputArr[0]+ inputArr[1];
+		cost += newRope;
 		inputArr.splice(0,2);
-		inputArr.push(priceRope);
-		inputArr.sort(function (a,b) {
-			return a-b;
+		inputArr.push(newRope);
+		 inputArr.sort(function(a,b){
+	  return a-b;
 		});
 		
 	}
-	document.querySelector("#result").textContent=cost;
+	
+document.querySelector("#result").textContent=cost;
 	
 }  
